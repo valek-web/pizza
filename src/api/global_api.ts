@@ -1,18 +1,58 @@
 import axios from 'axios'
-// https://eda.yandex.ru/api/v2/menu/retrieve/allopicca_tulskaya?regionId=1&autoTranslate=false
+
 const instance = axios.create({
-    baseURL: 'https://eda.yandex.ru/api/v2/',
+    baseURL: 'http://localhost:4000/',
     timeout: 1000,
     headers: {'X-Custom-Header': 'foobar'}
   })
 
 
 export const globalAPI = {
-    getMenu: () => {
-        return instance.get('menu/retrieve/allopicca_tulskaya?regionId=1&autoTranslate=false').then((res) => {
+    getPopularDishes: () => {
+        return instance.get('popular_dishes').then((res) => {
             return res
         })
-    }
+    },
+    getHotAppetizers: () => {
+        return instance.get('hot_appetizers').then((res) => {
+            return res
+        })
+    },
+    getSalads: () => {
+        return instance.get('salads').then((res) => {
+            return res
+        })
+    },
+    getSoups: () => {
+        return instance.get('soups').then((res) => {
+            return res
+        })
+    },
+    getPizza: () => {
+        return instance.get('pizza').then((res) => {
+            return res
+        })
+    },
+    getPaste: () => {
+        return instance.get('paste').then((res) => {
+            return res
+        })
+    },
+    getDesserts: () => {
+        return instance.get('desserts').then((res) => {
+            return res
+        })
+    },
+    getSauces: () => {
+        return instance.get('sauces').then((res) => {
+            return res
+        })
+    },
+    getDeverages: () => {
+        return instance.get('beverages').then((res) => {
+            return res
+        })
+    },
 }
 
 // {

@@ -1,0 +1,31 @@
+.header {
+    padding: 13px 0 13px 0;
+}
+
+.header__wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.menu {
+    display: flex;
+    list-style-type: none;
+}
+
+.menu__element:not(:first-child) {
+    margin-left: 32px;
+}
+
+.menu__element a {
+    text-decoration: none;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 22px;
+    color: #191919;
+}
+
+.menu__element a.active {
+    text-decoration: underline;
+}

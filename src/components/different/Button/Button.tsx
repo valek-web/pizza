@@ -5,6 +5,8 @@ type PropsType = {
     value: string
 }
 
+
+
 export const Button: React.FC<PropsType> = ({value}, props) => {
     return (
         <button className='button' {...props}>

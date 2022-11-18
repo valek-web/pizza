@@ -43,7 +43,7 @@ export const Layout = () => {
                         </nav>
                         <div>
                             <NavLink to='/pizza'>
-                                <Button value='Корзина' />
+                                <Button value='Корзина'/>
                             </NavLink>
                         </div>
                     </div>

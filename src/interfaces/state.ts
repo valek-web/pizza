@@ -1,9 +1,15 @@
+import { initialState } from "../store/reducers/menuTable";
+
 export interface Irespons {
-  name: string;
-  items: IitemsRes | null;
+  name: string | null;
+  items: IitemsRes | Array<any>;
 }
 
-interface IitemsRes {
+export interface stateRes extends Irespons {
+  pageCount: number;
+}
+
+export interface IitemsRes {
   adult: boolean;
   available: true;
   decimalPrice: string;

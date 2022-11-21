@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { Params, useParams } from "react-router-dom";
+import { Link, NavLink, Params, useParams } from "react-router-dom";
 import { globalAPI } from "../../api/global_api";
 import { Button } from "../../components/different/Button/Button";
 import { IitemsRes, Irespons } from "../../interfaces/state";
@@ -23,6 +23,7 @@ export const MenuTable: React.FC = () => {
       dispatch(addMenu(res));
     });
   }, [id]);
+
   console.log(state);
 
   const mapItem = () => {
@@ -39,14 +40,11 @@ export const MenuTable: React.FC = () => {
               />
             </div>
             <h2 className="dish_title">{item.name}</h2>
-            <div className="dish_descr">
-              <details>
-                <summary>Подробнее</summary>
-                <p>{item.description}</p>
-              </details>
-            </div>
+            <div className="dish_descr">{item.description}</div>
             <div className="dish_footer">
-              <Button value={"В корзину"} />
+              <NavLink to={`/${id}/${item.id}`}>
+                <Button value={"В корзину"} />
+              </NavLink>
               <div className="dish_price">{item.decimalPrice}руб</div>
             </div>
           </div>

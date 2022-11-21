@@ -11,12 +11,12 @@ export interface stateRes extends Irespons {
 
 export interface IitemsRes {
   adult: boolean;
-  available: true;
+  available: boolean;
   decimalPrice: string;
   description: string;
   id: number;
   inStock: any;
-  measure: IMeasureItemRes;
+  measure: IMeasureItemRes | {};
   name: string;
   optionsGroups: Array<optionsGroupsItemRes | []>;
   picture: IPictureItemRes;

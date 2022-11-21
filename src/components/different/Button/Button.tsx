@@ -1,16 +1,14 @@
-import React from 'react'
-import './Button.css'
+import React from "react";
+import "./Button.css";
 
 type PropsType = {
-    value: string
-}
+  value: string;
+};
 
-
-
-export const Button: React.FC<PropsType> = ({value}, props) => {
-    return (
-        <button className='button' {...props}>
-            {value}
-        </button>
-    )
-}
+export const Button: React.FC<PropsType> = ({ value }, props) => {
+  return (
+    <button className="button" {...props}>
+      {value}
+    </button>
+  );
+};

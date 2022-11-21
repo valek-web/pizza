@@ -1,5 +1,6 @@
 .header {
     padding: 13px 0 13px 0;
+    background-color: #fff;
 }
 
 .header__wrapper {
@@ -28,4 +29,8 @@
 
 .menu__element a.active {
     text-decoration: underline;
+}
+
+main {
+    background-color: #F9F9F9;
 }

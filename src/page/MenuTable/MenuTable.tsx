@@ -30,24 +30,25 @@ export const MenuTable: React.FC = () => {
     if (Array.isArray(state.items)) {
       return state.items.map((item: IitemsRes) => {
         return (
-          <div className="dish" key={item.id}>
-            <div className="dish_img">
-              <img
-                src={`https://eda.yandex/${item.picture.uri
-                  .replace("{w}", "300")
-                  .replace("{h}", "300")}`}
-                alt=""
-              />
-            </div>
-            <h2 className="dish_title">{item.name}</h2>
-            <div className="dish_descr">{item.description}</div>
-            <div className="dish_footer">
-              <NavLink to={`/${id}/${item.id}`}>
+          <NavLink to={`/${id}/${item.id}`} className="dish_link" key={item.id}>
+            <div className="dish">
+              <div className="dish_img">
+                <img
+                  src={`https://eda.yandex/${item.picture.uri
+                    .replace("{w}", "300")
+                    .replace("{h}", "300")}`}
+                  alt=""
+                />
+              </div>
+              <h2 className="dish_title">{item.name}</h2>
+              <div className="dish_descr">{item.description}</div>
+              <div className="dish_footer">
                 <Button value={"В корзину"} />
-              </NavLink>
-              <div className="dish_price">{item.decimalPrice}руб</div>
+
+                <div className="dish_price">{item.decimalPrice}руб</div>
+              </div>
             </div>
-          </div>
+          </NavLink>
         );
       });
     }

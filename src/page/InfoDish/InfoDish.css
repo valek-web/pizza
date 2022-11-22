@@ -1,1 +1,70 @@
+.dishInfo {
+  padding: 64px 0 64px 0;
+}
 
+.dishInfo_wrapper {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.dishInfo_title {
+  font-style: normal;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 28px;
+}
+
+.dishInfo_desc {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 18px;
+  list-style-type: circle;
+  margin-top: 15px;
+}
+
+.dishInfo_desc:before {
+  display: inline-block;
+  content: "";
+  width: 13px;
+  height: 13px;
+  border-radius: 100%;
+  background-color: #ff7010;
+  margin-right: 15px;
+}
+
+.dishInfo_measure {
+  font-size: 16px;
+}
+
+.dishInfo_measureValue {
+  color: #ff7010;
+}
+
+.dishInfo_footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 58px;
+}
+
+.dishInfo_price {
+  font-style: normal;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 28px;
+  color: #ff7010;
+}
+
+.dishInfo_price span {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 18px;
+  color: #a5a5a5;
+}
+
+.dishInfo_img img {
+  border-radius: 100%;
+}

@@ -16,7 +16,7 @@ export interface IitemsRes {
   description: string;
   id: number;
   inStock: any;
-  measure: IMeasureItemRes | {};
+  measure: IMeasureItemRes;
   name: string;
   optionsGroups: Array<optionsGroupsItemRes | []>;
   picture: IPictureItemRes;
@@ -27,8 +27,8 @@ export interface IitemsRes {
 }
 
 interface IMeasureItemRes {
-  measure_unit: string;
-  value: string;
+  measure_unit?: string;
+  value?: string;
 }
 
 interface IPictureItemRes {

@@ -52,7 +52,25 @@ export const Layout = () => {
         <Outlet />
       </main>
       <footer>
-        <div className="container"> Footer</div>
+        <div className="container">
+          <div className="footer_wraper">
+            <div className="header__logo">
+              <img src={logo} alt="Logo" />
+            </div>
+            <ul className="list">
+              <li className="list_h">Куда пицца</li>
+              <li className="list_items">О компании</li>
+              <li className="list_items">Пользовательское соглашение</li>
+              <li className="list_items">Условия гарантии</li>
+            </ul>
+            <ul className="list">
+              <li className="list_h">Помощь</li>
+              <li className="list_items">Ресторан</li>
+              <li className="list_items">Поддержка</li>
+              <li className="list_items">Отследить заказ</li>
+            </ul>
+          </div>
+        </div>
       </footer>
     </>
   );
